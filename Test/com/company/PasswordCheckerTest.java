@@ -17,36 +17,36 @@ class PasswordCheckerTest {
     @Test
     void validatePassword_receivedNull_throwException() {
         String password = null;
-        assertThrows(InvalidPasswordException.class, () -> emailValidator.validate(password));
+        assertThrows(InvalidPasswordException.class, () -> passwordChecker.validate(password));
     }
 
     @Test
     void validatePassword_tooShort_throwException() {
         String password = "Asdfg";
-        assertThrows(InvalidPasswordException.class, () -> emailValidator.validate(password));
+        assertThrows(InvalidPasswordException.class, () -> passwordChecker.validate(password));
     }
 
     @Test
     void validatePassword_doesNotHaveUppercaseLetters_throwException() {
         String password = "as@fff";
-        assertThrows(InvalidPasswordException.class, () -> emailValidator.validate(password));
+        assertThrows(InvalidPasswordException.class, () -> passwordChecker.validate(password));
     }
 
     @Test
     void validatePassword_doesNotHaveSpecialCharacter_throwException() {
         String password = "Asdffd";
-        assertThrows(InvalidPasswordException.class, () -> emailValidator.validate(password));
+        assertThrows(InvalidPasswordException.class, () -> passwordChecker.validate(password));
     }
 
     @Test
     void validatePassword_hasSpaces_throwException() {
         String password = "As@d df";
-        assertThrows(InvalidPasswordException.class, () -> emailValidator.validate(password));
+        assertThrows(InvalidPasswordException.class, () -> passwordChecker.validate(password));
     }
 
     @Test
     void validatePassword_meetsRequirements_doesNotThrowException() throws InvalidPasswordException {
         String password = "Asdfg@";
-        emailValidator.validate(password);
+        passwordChecker.validate(password);
     }
 }
