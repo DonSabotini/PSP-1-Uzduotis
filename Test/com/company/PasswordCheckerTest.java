@@ -47,6 +47,6 @@ class PasswordCheckerTest {
     @Test
     void validatePassword_meetsRequirements_doesNotThrowException() throws InvalidPasswordException {
         String password = "Asdfg@";
-        passwordChecker.validate(password);
+        emailValidator.validate(password);
     }
 }
