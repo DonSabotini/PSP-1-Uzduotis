@@ -11,16 +11,17 @@ class AddedPasswordCheckerTests {
     private PasswordChecker passwordChecker;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         passwordChecker = new PasswordChecker(5);
     }
+
     @Test
-    void passwordLength_nullRecieved_returnsFalse(){
+    void passwordLength_nullRecieved_returnsFalse() {
         assertEquals(false, passwordChecker.validate(null));
     }
 
     @Test
-    void passwordLength_validPassword_returnsTrue(){
+    void passwordLength_validPassword_returnsTrue() {
         assertEquals(true, passwordChecker.validate("Password123!"));
     }
 

@@ -43,7 +43,8 @@ class PhoneValidatorTests {
         assertEquals(true, phoneValidator.validate("+37065650288"));
     }
 
-    @Test // same test as above
+    @Test
+        // same test as above
     void phoneNumber_NumberCorrectLength_ReturnsTrue() {
         assertEquals(true, phoneValidator.validate("+37065650288"));
     }

@@ -16,34 +16,34 @@ class AddedEmailValidatorTests {
     }
 
     @Test
-    void email_nullRecieved_ReturnsFalse() {
+    void email_nullRecieved_returnsFalse() {
         assertEquals(false, emailValidator.validate(null));
     }
-    @Test
-    void email_containsSpaces_ReturnsFalse() {
-        assertEquals(false, emailValidator.validate("emai l@test.com"));
-    }
+
     @Test
     void email_usernameTooLong_returnFalse() {
         assertEquals(false, emailValidator.validate("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@test.com"));
     }
+
     @Test
     void email_domainTooLong_returnFalse() {
         assertEquals(false, emailValidator.validate("email@testtesttesttesttesttesttesttesttesttestte" +
                 "sttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest" +
                 "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest.com"));
     }
+
     @Test
-    void email_domainNameTooShort_ReturnsFalse() {
+    void email_domainNameTooShort_returnsFalse() {
         assertEquals(false, emailValidator.validate("email@.com"));
     }
 
     @Test
-    void email_TLDTooShort_ReturnsFalse() {
+    void email_TLDTooShort_returnsFalse() {
         assertEquals(false, emailValidator.validate("email@test.c"));
     }
+
     @Test
-    void email_TLDDoesNotStartWithALetter_ReturnsFalse() {
+    void email_TLDDoesNotStartWithALetter_returnsFalse() {
         assertEquals(false, emailValidator.validate("email@test.5om"));
     }
 

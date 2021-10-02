@@ -12,7 +12,7 @@ public class PhoneValidator {
     public boolean validate(String phonenumber) {
         if (phonenumber == null)
             return false;
-        if(phonenumber.contains(" "))
+        if (phonenumber.contains(" "))
             return false;
         int length = phonenumber.length();
         if (phonenumber.charAt(0) == '8') {
@@ -25,9 +25,9 @@ public class PhoneValidator {
             return false;
         phonenumber = phonenumber.substring(1, length);
         char[] numbers = phonenumber.toCharArray();
-        for (char number: numbers
-             ) {
-            if(!Character.isDigit(number))
+        for (char number : numbers
+        ) {
+            if (!Character.isDigit(number))
                 return false;
 
         }

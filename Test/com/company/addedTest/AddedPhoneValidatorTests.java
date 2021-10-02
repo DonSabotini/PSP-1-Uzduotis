@@ -17,7 +17,12 @@ class AddedPhoneValidatorTests {
     }
 
     @Test
-    void phoneNumber_NumberTooShort_ReturnsFalse() {
+    void phoneNumber_nullRecieved_returnsFalse() {
+        assertEquals(false, phoneValidator.validate(null));
+    }
+
+    @Test
+    void phoneNumber_numberTooShort_returnsFalse() {
         assertEquals(false, phoneValidator.validate("+319701"));
     }
 
