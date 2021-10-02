@@ -29,6 +29,6 @@ PhoneNumberValidator Testai:
 - Nebuvo testuojama kai paduodama null reikšmė.(papildžiau testu)
 - Buvo testuojama tiktai per ilgo numerio salyga, bet nebuvo tikrininama per trumpo. (papildžiau testu)
 
-Visi validotoriai pagal testus turėjo gražinti boolean, tačiau manau būtų geriau naudoti exceptionus nes galima paduoti papildomus informacijos kas tiksliai blogai su validuojamu stringu tai padėtų labiau patikrinti, kuri iš tikro validavimo taisykle nepraeina taip padėti ir užtikrinti korektiška validatoriaus veikima
+Visi validotoriai pagal testus turėjo gražinti boolean, tačiau manau būtų geriau naudoti exceptionus nes galima paduoti papildomus informacijos kas tiksliai blogai su validuojamu stringu ir tai padėtų labiau patikrinti, kuri iš tikro validavimo taisykle nepraeina taip padėti ir užtikrinti korektiška validatoriaus kodo veikima
 
 
