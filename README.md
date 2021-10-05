@@ -1,4 +1,4 @@
-# PSP-1-Uzduotis
+# PSP-2-Uzduotis
 Domantas Kemešis 3 grupė
 2 Lab
 
