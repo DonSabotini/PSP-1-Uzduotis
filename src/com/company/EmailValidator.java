@@ -1,8 +1,6 @@
 package com.company;
 
 
-import javax.jws.soap.SOAPBinding;
-import java.util.Locale;
 
 public class EmailValidator {
 
